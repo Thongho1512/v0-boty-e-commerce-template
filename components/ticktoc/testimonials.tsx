@@ -5,22 +5,20 @@ import { Star, Quote } from "lucide-react";
 import { testimonials } from "@/lib/data";
 import { FadeIn } from "./fade-in";
 
-// Duplicate testimonials to fill space and create seamless loop
-const extendedTestimonials = [...testimonials, ...testimonials, ...testimonials];
-
 export function Testimonials() {
   const t = useTranslations("testimonials");
 
-  // Split testimonials into 3 columns
-  const col1 = extendedTestimonials.filter((_, i) => i % 3 === 0);
-  const col2 = extendedTestimonials.filter((_, i) => i % 3 === 1);
-  const col3 = extendedTestimonials.filter((_, i) => i % 3 === 2);
+  // Duplicate testimonials multiple times to ensure seamless loop
+  // We need enough copies so the animation never shows a gap
+  const row1Items = [...testimonials.slice(0, 3), ...testimonials.slice(0, 3)];
+  const row2Items = [...testimonials.slice(3, 6), ...testimonials.slice(3, 6)];
+  const row3Items = [...testimonials.slice(0, 2), ...testimonials.slice(3, 5), ...testimonials.slice(0, 2), ...testimonials.slice(3, 5)];
 
   return (
-    <section className="py-20 lg:py-28 px-4 overflow-hidden bg-gradient-to-b from-background via-background to-secondary/20">
-      <div className="mx-auto max-w-7xl">
+    <section className="py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-background via-background to-secondary/20">
+      <div className="mx-auto max-w-7xl px-4 mb-16">
         <FadeIn>
-          <div className="text-center mb-16">
+          <div className="text-center">
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground text-balance">
               {t("title")}
             </h2>
@@ -30,48 +28,54 @@ export function Testimonials() {
             <div className="sakura-line max-w-32 mx-auto mt-5" />
           </div>
         </FadeIn>
+      </div>
 
-        {/* 3-Column Scrolling Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4 lg:gap-6">
-          {/* Column 1 */}
-          <div className="scroll-marquee-container">
-            <div className="scroll-marquee space-y-5 pb-5">
-              {col1.map((item, i) => (
-                <TestimonialCard key={i} item={item} />
-              ))}
-            </div>
-          </div>
-
-          {/* Column 2 - Offset animation */}
-          <div className="scroll-marquee-container hidden md:block">
-            <div
-              className="scroll-marquee space-y-5 pb-5"
-              style={{ animationDelay: "-10s" }}
-            >
-              {col2.map((item, i) => (
-                <TestimonialCard key={i} item={item} />
-              ))}
-            </div>
-          </div>
-
-          {/* Column 3 - Different offset */}
-          <div className="scroll-marquee-container hidden lg:block">
-            <div
-              className="scroll-marquee space-y-5 pb-5"
-              style={{ animationDelay: "-20s" }}
-            >
-              {col3.map((item, i) => (
-                <TestimonialCard key={i} item={item} />
-              ))}
-            </div>
+      {/* 3 Horizontal Scrolling Rows */}
+      <div className="space-y-6">
+        {/* Row 1 - Fast */}
+        <div className="scroll-marquee-container">
+          <div className="scroll-marquee-row scroll-marquee-row-fast">
+            {row1Items.map((item, i) => (
+              <TestimonialCard key={`row1-${i}`} item={item} />
+            ))}
+            {/* Duplicate again for seamless loop */}
+            {row1Items.map((item, i) => (
+              <TestimonialCard key={`row1-dup-${i}`} item={item} />
+            ))}
           </div>
         </div>
 
-        {/* Mobile note */}
-        <p className="text-xs text-muted-foreground text-center mt-8 lg:hidden">
-          💡 Swipe or scroll to see more testimonials
-        </p>
+        {/* Row 2 - Medium */}
+        <div className="scroll-marquee-container">
+          <div className="scroll-marquee-row scroll-marquee-row-medium">
+            {row2Items.map((item, i) => (
+              <TestimonialCard key={`row2-${i}`} item={item} />
+            ))}
+            {/* Duplicate again for seamless loop */}
+            {row2Items.map((item, i) => (
+              <TestimonialCard key={`row2-dup-${i}`} item={item} />
+            ))}
+          </div>
+        </div>
+
+        {/* Row 3 - Slow */}
+        <div className="scroll-marquee-container">
+          <div className="scroll-marquee-row scroll-marquee-row-slow">
+            {row3Items.map((item, i) => (
+              <TestimonialCard key={`row3-${i}`} item={item} />
+            ))}
+            {/* Duplicate again for seamless loop */}
+            {row3Items.map((item, i) => (
+              <TestimonialCard key={`row3-dup-${i}`} item={item} />
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* User tip */}
+      <p className="text-xs text-muted-foreground text-center mt-8 px-4">
+        💡 Hover over any testimonial to pause and read
+      </p>
     </section>
   );
 }
@@ -82,7 +86,7 @@ function TestimonialCard({
   item: (typeof testimonials)[0];
 }) {
   return (
-    <div className="testimonial-card bg-card rounded-lg p-5 ticktoc-shadow border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 cursor-default">
+    <div className="testimonial-card bg-card rounded-lg p-5 ticktoc-shadow border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
       <Quote className="h-5 w-5 text-primary/20 mb-2" />
       <div className="flex gap-0.5 mb-2">
         {Array.from({ length: item.rating }).map((_, s) => (
@@ -92,14 +96,14 @@ function TestimonialCard({
           />
         ))}
       </div>
-      <p className="text-xs sm:text-sm text-foreground leading-relaxed mb-3 italic line-clamp-3">
+      <p className="text-xs sm:text-sm text-foreground leading-relaxed mb-3 italic">
         {`"${item.text}"`}
       </p>
       <div className="flex items-center gap-2 pt-2 border-t border-border">
         <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-xs font-bold text-primary shrink-0">
           {item.avatar}
         </div>
-        <span className="text-xs sm:text-sm font-semibold text-foreground truncate">
+        <span className="text-xs sm:text-sm font-semibold text-foreground">
           {item.name}
         </span>
       </div>

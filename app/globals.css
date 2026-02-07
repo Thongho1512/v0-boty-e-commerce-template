@@ -187,30 +187,53 @@
   100% { background-position: 200% center; }
 }
 
-/* Vertical scrolling marquee for testimonials */
-@keyframes scroll-down {
-  0% {
-    transform: translateY(0);
+/* Horizontal scrolling marquee for testimonials - seamless infinite loop */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateY(100%);
+  to {
+    transform: translateX(-50%);
   }
 }
 
-.scroll-marquee {
-  animation: scroll-down 30s linear infinite;
+.scroll-marquee-row {
+  display: flex;
+  gap: 1rem;
+  animation: scroll-left 40s linear infinite;
 }
 
-.scroll-marquee:hover {
+.scroll-marquee-row:hover {
   animation-play-state: paused;
+}
+
+/* Different speeds for each row */
+.scroll-marquee-row-fast {
+  animation-duration: 30s;
+}
+
+.scroll-marquee-row-medium {
+  animation-duration: 40s;
+}
+
+.scroll-marquee-row-slow {
+  animation-duration: 50s;
 }
 
 .scroll-marquee-container {
   overflow: hidden;
-  height: 600px;
+  width: 100%;
 }
 
-/* Testimonial card scroll pause on hover */
+/* Testimonial card transitions */
 .testimonial-card {
   transition: all 0.3s ease-out;
+  flex-shrink: 0;
+  width: 340px;
+}
+
+@media (max-width: 640px) {
+  .testimonial-card {
+    width: 280px;
+  }
 }
