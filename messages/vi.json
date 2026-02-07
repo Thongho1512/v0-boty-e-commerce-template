@@ -196,6 +196,30 @@
     "rights": "Bản quyền thuộc về Ticktoc Kimono Rental. Bảo lưu mọi quyền.",
     "nearby": "Gần điểm tham quan"
   },
+  "about": {
+    "badge": "Về Chúng Tôi",
+    "title": "Dịch Vụ Cho Thuê Kimono Cao Cấp Tại Sài Gòn",
+    "p1": "Ticktoc Kimono Rental là cửa hàng cho thuê kimono hàng đầu tại TP. Hồ Chí Minh, mang đến trải nghiệm văn hóa Nhật Bản đích thực ngay giữa lòng Sài Gòn. Với hơn 200 bộ kimono chính hãng nhập trực tiếp từ Nhật Bản, chúng tôi cung cấp đa dạng mẫu mã từ kimono truyền thống đến phong cách hiện đại - phù hợp cho nữ, nam và trẻ em.",
+    "p2": "Đội ngũ chuyên nghiệp của chúng tôi sẽ hỗ trợ bạn mặc kimono đúng cách, làm tóc kiểu Nhật, và tư vấn phụ kiện phù hợp chỉ trong 30 phút. Dù bạn muốn chụp ảnh kỷ niệm, dạo phố Sài Gòn, hay tham gia sự kiện đặc biệt - Ticktoc Kimono luôn sẵn sàng đồng hành cùng bạn tạo nên những khoảnh khắc đáng nhớ.",
+    "imageAlt": "Không gian cửa hàng Ticktoc Kimono Rental tại Sài Gòn",
+    "happyCustomers": "Khách hàng hài lòng",
+    "locationLabel": "Vị trí thuận tiện tại trung tâm Quận 1",
+    "locationValue": "123 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh - gần Nhà Thờ Đức Bà, Bưu Điện Thành Phố, và Phố đi bộ Nguyễn Huệ.",
+    "explorePlans": "Xem Gói Thuê",
+    "viewGallery": "Album Ảnh"
+  },
+  "process": {
+    "title": "Quy Trình Thuê Kimono Tại Ticktoc",
+    "subtitle": "Chỉ 4 bước đơn giản để có trải nghiệm kimono tuyệt vời",
+    "step1Title": "Đặt Lịch",
+    "step1Desc": "Đặt lịch qua website, Zalo hoặc điện thoại. Chọn gói thuê và ngày phù hợp với bạn.",
+    "step2Title": "Chọn Kimono",
+    "step2Desc": "Đến cửa hàng và chọn bộ kimono yêu thích từ bộ sưu tập hơn 200 mẫu đa dạng.",
+    "step3Title": "Mặc & Làm Tóc",
+    "step3Desc": "Đội ngũ chuyên nghiệp hỗ trợ mặc kimono đúng cách và làm tóc kiểu Nhật chỉ trong 30 phút.",
+    "step4Title": "Tận Hưởng & Chụp Ảnh",
+    "step4Desc": "Dạo phố Sài Gòn, chụp ảnh tại các điểm tham quan, lưu giữ những khoảnh khắc đáng nhớ."
+  },
   "common": {
     "bookNow": "Đặt Ngay",
     "learnMore": "Tìm Hiểu Thêm",

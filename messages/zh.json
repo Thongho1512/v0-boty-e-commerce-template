@@ -13,5 +13,7 @@
   "gallery": { "title": "照片集", "subtitle": "Ticktoc客户的美好瞬间", "note": "当前为静态占位图。" },
   "contact": { "title": "联系我们", "subtitle": "通过以下方式联系", "address": "地址", "addressValue": "123 Nguyen Hue Street, 第一郡, 胡志明市", "phone": "电话", "phoneValue": "0901 234 567", "email": "邮箱", "emailValue": "hello@ticktockimono.vn", "zalo": "Zalo", "zaloValue": "0901 234 567", "hours": "营业时间", "hoursValue": "9:00 - 19:00（每天）", "nearby": "附近景点", "nearbyPlaces": "红教堂、中央邮局、滨城市场、Landmark 81、阮惠步行街、统一宫", "shopTour": "店铺参观" },
   "footer": { "description": "胡志明市高端和服租赁服务。", "quickLinks": "快速链接", "services": "服务", "contactUs": "联系我们", "followUs": "关注我们", "rights": "Ticktoc Kimono Rental. All rights reserved.", "nearby": "景点附近" },
+  "about": { "badge": "关于我们", "title": "西贡高端和服租赁服务", "p1": "Ticktoc Kimono Rental是胡志明市首屈一指的和服租赁店。拥有200多套从日本直接进口的正宗和服。", "p2": "专业团队30分钟内为您完成和服穿着和日式发型。无论是纪念照、逛街还是特殊活动，我们都能帮您创造难忘回忆。", "imageAlt": "Ticktoc和服店铺内部", "happyCustomers": "满意客户", "locationLabel": "第一郡中心便利位置", "locationValue": "123 Nguyen Hue Street, 第一郡, 胡志明市 - 近红教堂和中央邮局。", "explorePlans": "查看方案", "viewGallery": "照片集" },
+  "process": { "title": "Ticktoc和服租赁流程", "subtitle": "4个简单步骤享受和服体验", "step1Title": "预约", "step1Desc": "通过网站、Zalo或电话预约。", "step2Title": "选择和服", "step2Desc": "从200+套和服中挑选您喜欢的。", "step3Title": "穿着 & 发型", "step3Desc": "专业团队30分钟内完成。", "step4Title": "享受 & 拍照", "step4Desc": "漫步西贡，在热门景点拍照留念。" },
   "common": { "bookNow": "立即预约", "learnMore": "了解更多", "viewAll": "查看全部", "back": "返回", "home": "首页" }
 }
