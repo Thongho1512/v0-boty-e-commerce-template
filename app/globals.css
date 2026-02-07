@@ -187,10 +187,30 @@
   100% { background-position: 200% center; }
 }
 
-.gold-shimmer {
-  background: linear-gradient(90deg, #D4AF37 0%, #F5D76E 50%, #D4AF37 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3s linear infinite;
+/* Vertical scrolling marquee for testimonials */
+@keyframes scroll-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scroll-marquee {
+  animation: scroll-down 30s linear infinite;
+}
+
+.scroll-marquee:hover {
+  animation-play-state: paused;
+}
+
+.scroll-marquee-container {
+  overflow: hidden;
+  height: 600px;
+}
+
+/* Testimonial card scroll pause on hover */
+.testimonial-card {
+  transition: all 0.3s ease-out;
 }
