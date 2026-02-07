@@ -156,6 +156,7 @@
     "rights": "Ticktoc Kimono Rental. All rights reserved.",
     "nearby": "観光スポット近く"
   },
+  "videos": { "badge": "ビデオ紹介", "title": "Ticktoc Kimono Rentalを発見", "subtitle": "ショップツアーとレンタル体験動画をご覧ください" },
   "video": {
     "badge": "ショップツアー",
     "title": "Ticktoc Kimono Rentalを発見",
@@ -179,7 +180,7 @@
     "title": "Ticktocでの着物レンタルの流れ",
     "subtitle": "4つの簡単なステップで素敵な着物体験を",
     "step1Title": "予約",
-    "step1Desc": "ウェブサイト、Zalo、または電話でご予約。お好みのプランと日程をお選びください。",
+    "step1Desc": "ウェブサイト、Zalo、または電話でご予約。お好みのプランと日��をお選びください。",
     "step2Title": "着物を選ぶ",
     "step2Desc": "200着以上のコレクションからお気に入りの着物をお選びいただけます。",
     "step3Title": "着付け＆ヘアスタイリング",

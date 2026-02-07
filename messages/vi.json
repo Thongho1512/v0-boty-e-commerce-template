@@ -196,6 +196,11 @@
     "rights": "Bản quyền thuộc về Ticktoc Kimono Rental. Bảo lưu mọi quyền.",
     "nearby": "Gần điểm tham quan"
   },
+  "videos": {
+    "badge": "Video Giới Thiệu",
+    "title": "Khám Phá Ticktoc Kimono Rental",
+    "subtitle": "Xem các video giới thiệu cửa hàng và trải nghiệm thuê kimono tại Ticktoc Kimono Rental Sài Gòn"
+  },
   "video": {
     "badge": "Video Giới Thiệu",
     "title": "Khám Phá Ticktoc Kimono Rental",
@@ -210,7 +215,7 @@
     "p2": "Đội ngũ chuyên nghiệp của chúng tôi sẽ hỗ trợ bạn mặc kimono đúng cách, làm tóc kiểu Nhật, và tư vấn phụ kiện phù hợp chỉ trong 30 phút. Dù bạn muốn chụp ảnh kỷ niệm, dạo phố Sài Gòn, hay tham gia sự kiện đặc biệt - Ticktoc Kimono luôn sẵn sàng đồng hành cùng bạn tạo nên những khoảnh khắc đáng nhớ.",
     "imageAlt": "Không gian cửa hàng Ticktoc Kimono Rental tại Sài Gòn",
     "happyCustomers": "Khách hàng hài lòng",
-    "locationLabel": "Vị trí thuận tiện tại trung tâm Quận 1",
+    "locationLabel": "Vị trí thu���n tiện tại trung tâm Quận 1",
     "locationValue": "123 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh - gần Nhà Thờ Đức Bà, Bưu Điện Thành Phố, và Phố đi bộ Nguyễn Huệ.",
     "explorePlans": "Xem Gói Thuê",
     "viewGallery": "Album Ảnh"

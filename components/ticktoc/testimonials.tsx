@@ -8,15 +8,12 @@ import { FadeIn } from "./fade-in";
 export function Testimonials() {
   const t = useTranslations("testimonials");
 
-  // Duplicate testimonials multiple times to ensure seamless loop
-  // We need enough copies so the animation never shows a gap
-  const row1Items = [...testimonials.slice(0, 3), ...testimonials.slice(0, 3)];
-  const row2Items = [...testimonials.slice(3, 6), ...testimonials.slice(3, 6)];
-  const row3Items = [...testimonials.slice(0, 2), ...testimonials.slice(3, 5), ...testimonials.slice(0, 2), ...testimonials.slice(3, 5)];
+  // Duplicate testimonials 3x for seamless infinite horizontal loop
+  const scrollItems = [...testimonials, ...testimonials, ...testimonials];
 
   return (
     <section className="py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-background via-background to-secondary/20">
-      <div className="mx-auto max-w-7xl px-4 mb-16">
+      <div className="mx-auto max-w-7xl px-4 mb-12">
         <FadeIn>
           <div className="text-center">
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground text-balance">
@@ -30,45 +27,16 @@ export function Testimonials() {
         </FadeIn>
       </div>
 
-      {/* 3 Horizontal Scrolling Rows */}
-      <div className="space-y-6">
-        {/* Row 1 - Fast */}
-        <div className="scroll-marquee-container">
-          <div className="scroll-marquee-row scroll-marquee-row-fast">
-            {row1Items.map((item, i) => (
-              <TestimonialCard key={`row1-${i}`} item={item} />
-            ))}
-            {/* Duplicate again for seamless loop */}
-            {row1Items.map((item, i) => (
-              <TestimonialCard key={`row1-dup-${i}`} item={item} />
-            ))}
-          </div>
-        </div>
-
-        {/* Row 2 - Medium */}
-        <div className="scroll-marquee-container">
-          <div className="scroll-marquee-row scroll-marquee-row-medium">
-            {row2Items.map((item, i) => (
-              <TestimonialCard key={`row2-${i}`} item={item} />
-            ))}
-            {/* Duplicate again for seamless loop */}
-            {row2Items.map((item, i) => (
-              <TestimonialCard key={`row2-dup-${i}`} item={item} />
-            ))}
-          </div>
-        </div>
-
-        {/* Row 3 - Slow */}
-        <div className="scroll-marquee-container">
-          <div className="scroll-marquee-row scroll-marquee-row-slow">
-            {row3Items.map((item, i) => (
-              <TestimonialCard key={`row3-${i}`} item={item} />
-            ))}
-            {/* Duplicate again for seamless loop */}
-            {row3Items.map((item, i) => (
-              <TestimonialCard key={`row3-dup-${i}`} item={item} />
-            ))}
-          </div>
+      {/* Single Horizontal Scrolling Row */}
+      <div className="scroll-marquee-container">
+        <div className="scroll-marquee-row scroll-marquee-row-medium">
+          {scrollItems.map((item, i) => (
+            <TestimonialCard key={`testimonial-${i}`} item={item} />
+          ))}
+          {/* Duplicate for seamless loop (total 2x for smooth infinite) */}
+          {scrollItems.map((item, i) => (
+            <TestimonialCard key={`testimonial-dup-${i}`} item={item} />
+          ))}
         </div>
       </div>
 
@@ -110,3 +78,4 @@ function TestimonialCard({
     </div>
   );
 }
+

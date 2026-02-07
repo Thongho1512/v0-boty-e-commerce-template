@@ -7,6 +7,7 @@ import { Testimonials } from "@/components/ticktoc/testimonials";
 import { CTABanner } from "@/components/ticktoc/cta-banner";
 import { AboutSection } from "@/components/ticktoc/about-section";
 import { ProcessSection } from "@/components/ticktoc/process-section";
+import { VideosSection } from "@/components/ticktoc/videos-section";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Hero />
       <AboutSection />
       <FeaturedPlans />
+      <VideosSection />
       <ProcessSection />
       <WhyUs />
       <Testimonials />
