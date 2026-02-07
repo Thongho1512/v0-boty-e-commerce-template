@@ -196,6 +196,13 @@
     "rights": "Bản quyền thuộc về Ticktoc Kimono Rental. Bảo lưu mọi quyền.",
     "nearby": "Gần điểm tham quan"
   },
+  "video": {
+    "badge": "Video Giới Thiệu",
+    "title": "Khám Phá Ticktoc Kimono Rental",
+    "subtitle": "Xem video giới thiệu cửa hàng và trải nghiệm thuê kimono tại Ticktoc Kimono Rental Sài Gòn",
+    "thumbnailAlt": "Video giới thiệu Ticktoc Kimono Rental",
+    "caption": "Ticktoc Kimono Rental - Trải nghiệm thuê kimono cao cấp tại Sài Gòn"
+  },
   "about": {
     "badge": "Về Chúng Tôi",
     "title": "Dịch Vụ Cho Thuê Kimono Cao Cấp Tại Sài Gòn",
@@ -210,7 +217,7 @@
   },
   "process": {
     "title": "Quy Trình Thuê Kimono Tại Ticktoc",
-    "subtitle": "Chỉ 4 bước đơn giản để có trải nghiệm kimono tuyệt vời",
+    "subtitle": "Chỉ 4 bước đơn giản để c�� trải nghiệm kimono tuyệt vời",
     "step1Title": "Đặt Lịch",
     "step1Desc": "Đặt lịch qua website, Zalo hoặc điện thoại. Chọn gói thuê và ngày phù hợp với bạn.",
     "step2Title": "Chọn Kimono",

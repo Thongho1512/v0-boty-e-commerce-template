@@ -196,6 +196,13 @@
     "rights": "All rights reserved by Ticktoc Kimono Rental.",
     "nearby": "Near attractions"
   },
+  "video": {
+    "badge": "Shop Tour",
+    "title": "Discover Ticktoc Kimono Rental",
+    "subtitle": "Watch our shop tour video and see the kimono rental experience at Ticktoc Kimono Rental Saigon",
+    "thumbnailAlt": "Ticktoc Kimono Rental video tour",
+    "caption": "Ticktoc Kimono Rental - Premium kimono rental experience in Saigon"
+  },
   "about": {
     "badge": "About Us",
     "title": "Premium Kimono Rental Service in Saigon",

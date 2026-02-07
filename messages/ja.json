@@ -156,6 +156,13 @@
     "rights": "Ticktoc Kimono Rental. All rights reserved.",
     "nearby": "観光スポット近く"
   },
+  "video": {
+    "badge": "ショップツアー",
+    "title": "Ticktoc Kimono Rentalを発見",
+    "subtitle": "ショップツアー動画をご覧ください。サイゴンでの着物レンタル体験をご紹介します",
+    "thumbnailAlt": "Ticktoc Kimono Rentalのビデオツアー",
+    "caption": "Ticktoc Kimono Rental - サイゴンのプレミアム着物レンタル体験"
+  },
   "about": {
     "badge": "私たちについて",
     "title": "サイゴンのプレミアム着物レンタルサービス",
