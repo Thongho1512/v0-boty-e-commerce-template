@@ -6,6 +6,11 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
+import { Header } from "@/components/ticktoc/header";
+import { Footer } from "@/components/ticktoc/footer";
+import { CherryBlossoms } from "@/components/ticktoc/cherry-blossoms";
+import { ScrollToTop } from "@/components/ticktoc/scroll-to-top";
+import { SocialFloat } from "@/components/ticktoc/social-float";
 import "../globals.css";
 
 const inter = Inter({
@@ -84,7 +89,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${inter.variable} ${notoSerifJP.variable} font-sans antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <CherryBlossoms />
+          <Header />
+          <div className="min-h-screen">{children}</div>
+          <Footer />
+          <SocialFloat />
+          <ScrollToTop />
         </NextIntlClientProvider>
         <Analytics />
       </body>

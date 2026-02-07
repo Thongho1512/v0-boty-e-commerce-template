@@ -196,6 +196,42 @@
     "rights": "All rights reserved by Ticktoc Kimono Rental.",
     "nearby": "Near attractions"
   },
+  "videos": {
+    "badge": "Video Introduction",
+    "title": "Discover Ticktoc Kimono Rental",
+    "subtitle": "Watch our shop tour and rental experience videos at Ticktoc Kimono Rental Saigon"
+  },
+  "video": {
+    "badge": "Shop Tour",
+    "title": "Discover Ticktoc Kimono Rental",
+    "subtitle": "Watch our shop tour video and see the kimono rental experience at Ticktoc Kimono Rental Saigon",
+    "thumbnailAlt": "Ticktoc Kimono Rental video tour",
+    "caption": "Ticktoc Kimono Rental - Premium kimono rental experience in Saigon"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Premium Kimono Rental Service in Saigon",
+    "p1": "Ticktoc Kimono Rental is the premier kimono rental shop in Ho Chi Minh City, bringing an authentic Japanese cultural experience to the heart of Saigon. With over 200 genuine kimonos imported directly from Japan, we offer a diverse selection from traditional to modern styles - suitable for women, men, and children.",
+    "p2": "Our professional team will help you dress in a kimono properly, style your hair in a Japanese fashion, and recommend accessories - all within 30 minutes. Whether you want memorable photos, a stroll through Saigon, or attend a special event - Ticktoc Kimono is always ready to help you create unforgettable moments.",
+    "imageAlt": "Ticktoc Kimono Rental shop interior in Saigon",
+    "happyCustomers": "Happy customers",
+    "locationLabel": "Conveniently located in central District 1",
+    "locationValue": "123 Nguyen Hue Street, District 1, HCMC - near Notre-Dame Cathedral, Central Post Office, and Nguyen Hue Walking Street.",
+    "explorePlans": "Explore Plans",
+    "viewGallery": "Photo Gallery"
+  },
+  "process": {
+    "title": "How Kimono Rental Works at Ticktoc",
+    "subtitle": "Just 4 simple steps for an amazing kimono experience",
+    "step1Title": "Book Appointment",
+    "step1Desc": "Book via website, Zalo, or phone. Choose a plan and date that works for you.",
+    "step2Title": "Choose Your Kimono",
+    "step2Desc": "Visit our store and pick your favorite kimono from our collection of 200+ styles.",
+    "step3Title": "Dress Up & Hair Styling",
+    "step3Desc": "Our professional team helps you dress properly and style your hair in just 30 minutes.",
+    "step4Title": "Enjoy & Take Photos",
+    "step4Desc": "Stroll through Saigon, take photos at popular spots, and create unforgettable memories."
+  },
   "common": {
     "bookNow": "Book Now",
     "learnMore": "Learn More",
