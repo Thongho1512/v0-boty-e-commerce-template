@@ -3,19 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { SakuraIcon } from "./sakura-icon";
 import { LanguageSwitcher } from "./language-switcher";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -33,23 +24,6 @@ export function Header() {
     { label: t("gallery"), href: `${prefix}/gallery` },
     { label: t("contact"), href: `${prefix}/contact` },
   ];
-
-  const planDropdown = {
-    women: [
-      { label: t("womenBasic"), href: `${prefix}/plans/kimono-nu-co-ban` },
-      { label: t("womenLace"), href: `${prefix}/plans/kimono-nu-ren` },
-      { label: t("womenHoumongi"), href: `${prefix}/plans/kimono-houmongi` },
-      { label: t("womenFurisode"), href: `${prefix}/plans/kimono-furisode` },
-    ],
-    men: [
-      { label: t("menBasic"), href: `${prefix}/plans/kimono-nam-co-ban` },
-      { label: t("menHakama"), href: `${prefix}/plans/kimono-nam-hakama` },
-    ],
-    kids: [
-      { label: t("kids35"), href: `${prefix}/plans/kimono-tre-em-3-5` },
-      { label: t("kids7"), href: `${prefix}/plans/kimono-tre-em-7` },
-    ],
-  };
 
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
@@ -71,52 +45,13 @@ export function Header() {
             {t("home")}
           </Link>
 
-          {/* Plans Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground hover:text-primary ticktoc-transition rounded-md hover:bg-secondary">
-                {t("plans")}
-                <ChevronDown className="h-3.5 w-3.5" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-56">
-              <DropdownMenuItem asChild>
-                <Link href={`${prefix}/plans`} className="font-medium">
-                  {t("plans")}
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger>{t("women")}</DropdownMenuSubTrigger>
-                <DropdownMenuSubContent>
-                  {planDropdown.women.map((item) => (
-                    <DropdownMenuItem key={item.href} asChild>
-                      <Link href={item.href}>{item.label}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuSubContent>
-              </DropdownMenuSub>
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger>{t("men")}</DropdownMenuSubTrigger>
-                <DropdownMenuSubContent>
-                  {planDropdown.men.map((item) => (
-                    <DropdownMenuItem key={item.href} asChild>
-                      <Link href={item.href}>{item.label}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuSubContent>
-              </DropdownMenuSub>
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger>{t("kids")}</DropdownMenuSubTrigger>
-                <DropdownMenuSubContent>
-                  {planDropdown.kids.map((item) => (
-                    <DropdownMenuItem key={item.href} asChild>
-                      <Link href={item.href}>{item.label}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuSubContent>
-              </DropdownMenuSub>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {/* Plans Button */}
+          <Link
+            href={`${prefix}/plans`}
+            className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary ticktoc-transition rounded-md hover:bg-secondary"
+          >
+            {t("plans")}
+          </Link>
 
           {navItems.slice(1).map((item) => (
             <Link
@@ -152,57 +87,26 @@ export function Header() {
       {mobileOpen && (
         <div className="lg:hidden border-t border-border bg-background">
           <nav className="flex flex-col px-4 py-4 gap-1">
-            {navItems.map((item) => (
+            <Link
+              href={prefix}
+              onClick={() => setMobileOpen(false)}
+              className="px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md"
+            >
+              {t("home")}
+            </Link>
+            <Link
+              href={`${prefix}/plans`}
+              onClick={() => setMobileOpen(false)}
+              className="px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md"
+            >
+              {t("plans")}
+            </Link>
+            {navItems.slice(1).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
                 className="px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md"
-              >
-                {item.label}
-              </Link>
-            ))}
-
-            {/* Mobile plan links */}
-            <div className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-2">
-              {t("plans")}
-            </div>
-            <Link
-              href={`${prefix}/plans`}
-              onClick={() => setMobileOpen(false)}
-              className="px-6 py-2 text-sm text-foreground hover:text-primary hover:bg-secondary rounded-md"
-            >
-              {t("plans")}
-            </Link>
-            <div className="px-6 py-1.5 text-xs text-muted-foreground">{t("women")}</div>
-            {planDropdown.women.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="px-9 py-2 text-sm text-foreground hover:text-primary hover:bg-secondary rounded-md"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <div className="px-6 py-1.5 text-xs text-muted-foreground">{t("men")}</div>
-            {planDropdown.men.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="px-9 py-2 text-sm text-foreground hover:text-primary hover:bg-secondary rounded-md"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <div className="px-6 py-1.5 text-xs text-muted-foreground">{t("kids")}</div>
-            {planDropdown.kids.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="px-9 py-2 text-sm text-foreground hover:text-primary hover:bg-secondary rounded-md"
               >
                 {item.label}
               </Link>
